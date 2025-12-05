@@ -1,4 +1,4 @@
-import arrow from 'src/images/arrow.svg';
+import arrow from '../../images/arrow.svg';
 
 import styles from './ArrowButton.module.scss';
 import clsx from 'clsx';
@@ -13,18 +13,23 @@ type ArrowButtonProps = {
 
 export const ArrowButton = ({ isOpen, onClick }: ArrowButtonProps) => {
 	return (
-		/* Не забываем указаывать role и aria-label атрибуты для интерактивных элементов */
-		<div
+		<button
+			type='button'
+			className={clsx(styles.container, {
+				[styles.container_open]: isOpen,
+			})}
+			onClick={onClick}
 			role='button'
-			aria-label='Открыть/Закрыть форму параметров статьи'
-			tabIndex={0}
-			className={clsx(styles.container, { [styles.container_open]: isOpen })}
-			onClick={onClick}>
+			aria-label={
+				isOpen ? 'Закрыть панель настроек' : 'Открыть панель настроек'
+			}>
 			<img
 				src={arrow}
-				alt='иконка стрелочки'
-				className={clsx(styles.arrow, { [styles.arrow_open]: isOpen })}
+				alt=''
+				className={clsx(styles.arrow, {
+					[styles.arrow_open]: isOpen,
+				})}
 			/>
-		</div>
+		</button>
 	);
 };
