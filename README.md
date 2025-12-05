@@ -1,5 +1,7 @@
 # Проектная работа: Blog styler
 
+https://ayanrv.github.io/article-styler/
+
 [Макет проекта](https://www.figma.com/design/1aPqPQMjAWWd9cmooQhIBW/Custom-dropdown?node-id=0-1&p=f&t=a2WRV3pe3SI5bPCJ-0)
 
 Для запуска линтера для стилей выполните:
